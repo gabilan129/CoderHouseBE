@@ -1,0 +1,19 @@
+    
+
+
+<div style="background-color: #F5F5F5; padding: 20px;">
+    <h1 style="text-align: center; font-size: 32px;">Datos del Usuario Logueado</h1>
+</div>
+<div style="margin-top: 20px;">
+    {{#if session.user}}
+        <h2 style="text-align: center; font-size: 28px;">Bienvenido {{session.user.first_name}}!</h2>
+        <h3 style="font-size: 24px;">Nombre completo: {{session.user.last_name}}, {{session.user.first_name}}</h3>
+        <h3 style="font-size: 24px;">Role: {{session.user.rol}}</h3>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <button type="submit" name="rol" value="premium" id="premiumButton" style="font-size: 18px; padding: 10px 20px; margin-right: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Cambiar Rol</button>
+        </div>
+    {{/if}}
+</div>
+<script src="logout.js" type="application/javascript"></script>
+<script src="userRole.js" type="application/javascript"></script>
+

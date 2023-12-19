@@ -1,0 +1,76 @@
+{
+  "name": "fs_sinc",
+  "version": "1.0.0",
+  "description": "Proyecto Backend Coderhouse",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha Testing/productsTesting.js",
+    "start": "node app.js MONGO ",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasKatz/BackendProject.git"
+  },
+  "keywords": [
+    "#Backend",
+    "-",
+    "Desafio",
+    "2"
+  ],
+  "author": "Lucas Katz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasKatz/BackendProject/issues"
+  },
+  "homepage": "https://github.com/LucasKatz/BackendProject#readme",
+  "dependencies": {
+    "artillery": "^2.0.0-31",
+    "artillery-plugin-metrics-by-endpoint": "^1.0.2",
+    "bcrypt": "^5.1.0",
+    "commander": "^10.0.0",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-compression": "^1.0.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mercadopago": "^1.5.17",
+    "mongo-connect": "^0.0.6",
+    "mongoose": "^6.9.0",
+    "mongoose-paginate-v2": "^1.7.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.20",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth2": "^0.2.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.4",
+    "supertest-session": "^5.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
+    "sweetalert": "^2.1.2",
+    "toastify-js": "^1.12.0",
+    "toastr": "^2.1.4",
+    "twilio": "^4.9.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}

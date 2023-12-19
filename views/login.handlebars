@@ -1,0 +1,124 @@
+<style>
+ /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }*/
+
+  /* Navbar */
+  nav {
+    background-color: #c63c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+  li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Alert */
+  .alert {
+    background-color: #ffe4e4;
+    border: 1px solid #ffa5a5;
+    border-radius: 4px;
+    color: #c63c3c;
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Chat */
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button {
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #send {
+    background-color: #c63c3c;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #send:hover {
+    background-color: #ff5656;
+  }
+
+    #forgot {
+    background-color: #c63c3c;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #forgot:hover {
+    background-color: #ff5656;
+  }
+
+  #github {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #github:hover {
+    background-color: #444;
+  }
+</style>
+
+<div>
+
+
+  {{#if message}}
+    <div class="alert">{{message}}</div>
+  {{/if}}
+
+  <div class="chat-container">
+    <input type="text" placeholder="Username" name="username" id="username" />
+
+    <input type="password" placeholder="Password" name="password" id="password" />
+
+    <button id="send">Enviar</button>
+
+    
+    <button id="forgot">Olvide Mi Contraseña</button>
+
+    <a href="/api/sessions/githubcallback"><button id="github">Ingresar con Github</button></a>
+
+    <a href="/login/auth/google"><button id="google">Ingresar con Google</button></a>
+
+
+  </div>
+</div>
+

@@ -1,0 +1,147 @@
+<style>
+    nav {
+        background-color: #c63c3c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #productsConteiner {
+        margin: 20px;
+    }
+
+    #productsConteiner h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    #productsConteiner #messageDiv {
+        background-color: #ffe4e4;
+        border: 1px solid #ffa5a5;
+        border-radius: 4px;
+        color: #c63c3c;
+        margin: 10px auto;
+        max-width: 600px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #productsConteiner div {
+        margin-top: 20px;
+    }
+
+    #productsConteiner div>div {
+        margin: 20px;
+        max-width: 600px;
+        border: 1px solid #eee;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    #productsConteiner div>div h2 {
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #productsConteiner div>div a {
+        text-decoration: none;
+        color: #c63c3c;
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #productsConteiner div>div>div {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #productsConteiner div>div>div label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    #productsConteiner div>div>div input {
+        border: 1px solid #333;
+        border-radius: 4px;
+        padding: 5px;
+        width: 80px;
+    }
+
+    #productsConteiner div>div>div button {
+        background-color: #c63c3c;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .pagination .page-item {
+        margin: 0 5px;
+    }
+
+    .pagination .page-link {
+        color: #333;
+    }
+
+    .pagination .page-link.active {
+        font-weight: bold;
+    }
+
+    #logout {
+        margin-bottom: 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <form id="myForm" method="GET" class="speaker-form" style="background-color: #f7f7f7; border: 1px solid #ccc; border-radius: 4px; max-width: 600px; padding: 20px;">
+        <div class="form-row" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="full-name" style="font-weight: bold; margin-bottom: 10px;">Nombre:</label>
+            <input id="first_name" name="first_name" type="text" style="border: 1px solid #ccc; border-radius: 4px; padding: 5px;">
+        </div>
+        <div class="form-row" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="email" style="font-weight: bold; margin-bottom: 10px;">Correo electrónico:</label>
+            <input id="email" name="email" type="email" placeholder="joe@example.com" style="border: 1px solid #ccc; border-radius: 4px; padding: 5px;">
+        </div>
+        <div class="form-row" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="full-user" style="font-weight: bold; margin-bottom: 10px;">Apellido:</label>
+            <input id="last_name" name="last_name" type="text" style="border: 1px solid #ccc; border-radius: 4px; padding: 5px;">
+        </div>
+        <div class="form-row" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="full-user" style="font-weight: bold; margin-bottom: 10px;">Edad:</label>
+            <input id="age" name="age" type="text" style="border: 1px solid #ccc; border-radius: 4px; padding: 5px;">
+        </div>
+        <div class="form-row" style="display: flex; flex-direction: column; margin-bottom: 20px;">
+            <label for="full-user" style="font-weight: bold; margin-bottom: 10px;">Contraseña:</label>
+            <input id="password" name="password" type="password" style="border: 1px solid #ccc; border-radius: 4px; padding: 5px;">
+        </div>
+
+        <div class="form-row" style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <button id="signup" type="button" class="signup" style="background-color: #c63c3c; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; margin-right: 10px;">Crear usuario</button>
+            <button id="ingreso" type="button" class="signup" style="background-color: #333; color: #fff; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px;">Ingresar</button>
+        </div>
+    </form>
+
+
+</div>

@@ -1,0 +1,39 @@
+<div style="display: flex; flex-direction: column; align-items: center;">
+    <div id="productsConteiner" style="margin: 20px;">
+        <h1 style="text-align: center; color: #333;">Mi Carrito </h1>
+        {{#each cart}}
+            <div style="margin: 20px; max-width: 600px; border: 1px solid #eee; padding: 10px; border-radius: 4px;">
+                <h2 style="font-size: 24px; margin: 0; padding: 0;">{{this.product.title}}</h2>
+                <div style="margin-top: 10px; display: flex; align-items: center;">
+                    <!-- Contenido del producto en el carrito -->
+                </div>
+                <div style="margin-top: 10px; display: flex; align-items: center;">
+                    <h4 style="font-size: 16px; margin-right: 10px;">Cantidad: {{this.quantity}}</h4>
+                    <br>
+                    <h4 style="font-size: 16px;">Precio unit.: ${{this.product.price}}</h4>
+                </div>
+                <div style="margin-top: 10px;">
+                    <h4 style="font-size: 16px;">Valor total: ${{this.totalPrice}}</h4>
+                </div>
+                <div style="margin-top: 10px;">
+                    <button class="deleteProductButton" data-cart-id="{{cartId}}" data-product-id="{{this.product._id}}">Eliminar</button>
+                </div>
+            </div>
+        {{/each}}
+        {{#if message}}
+            <p class="text-white text-center" style="background-color: #ffe4e4; border: 1px solid #ffa5a5; border-radius: 4px; color: #c63c3c; margin: 10px auto; max-width: 600px; padding: 10px; text-align: center;">{{message}}</p>
+        {{else}}
+            <div style="margin-top: 10px;">
+                <button class="vaciarCarrito" data-cart-id="{{cartId}}">Vaciar Carrito</button>
+            </div>
+            <div style="margin-top: 10px;">
+                <button class="Finalizar Compra" id="finalCash" data-cart-id="{{cartId}}">Pagar en Efectivo</button>
+            </div>
+
+<div style="margin-top: 10px;">
+    <button class="pagoMercadoPagoButton" id="finalMP" data-cart-id="{{cartId}}">Pagar con MercadoPago</button>
+</div>
+
+        {{/if}}
+    </div>
+</div>

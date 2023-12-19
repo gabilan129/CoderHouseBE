@@ -1,0 +1,182 @@
+paths:
+  /products:
+    get:
+      summary: "Obtiene todos los productos"
+      tags: 
+        - Products
+      responses:
+        "200":
+          description: "Los productos fueron obtenidos con exito"
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schemas/Products'
+        "500":
+          description: "Error intentando acceder al listado de productos"
+
+    post:
+      summary: "Agrega un producto a la base de datos"
+      tags: 
+        - Products
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/schemas/Products'
+      responses:
+        "200":
+          description: "El producto fue agregado con exito"
+        "500":
+          description: "Error intentando agregar un producto al listado de productos" 
+  
+  /products/:id:
+    put:
+      summary: "Actualiza un producto especifico por ID"
+      tags: 
+        - Products
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: id del producto que desea solicitar
+        schema:
+          $type: ObjectId
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#components/schemas/Products'
+      responses:
+        "200":
+          description: "El producto fue actualizado con exito"
+        "500":
+          description: "Error intentando actualizar el producto"
+
+    delete:
+      summary: "Elimina un producto especifico por ID"
+      tags: 
+        - Products
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: id del producto que desea eliminar
+        schema:
+          $type: ObjectId
+      responses:
+        "200":
+          description: "El producto fue eliminado con exito"
+        "500":
+          description: "Error intentando eliminar el producto"
+    
+  /products/{pid}:
+    get:
+      summary: "Muestra los detalles de un producto por ID"
+      tags: 
+        - Products
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: id del producto que desea solicitar
+        schema:
+          $type: string   
+      responses:
+        "200":
+          description: "Detalles de su Producto"
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#components/schemas/Products'
+        "500":
+          description: "Error intentando mostrar el producto"
+
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado por Mongo
+        owner:
+          type: String
+          description: Creador del objeto
+        title:
+          type: String
+          description: Nombre del Producto
+        description:
+          type: String
+          description: Descripcion del producto
+        code:
+          type: String
+          description: Codigo referente al producto
+        price:
+          type: Number
+          description: Precio del Producto
+        thumbnail:
+          type: String
+          description: Link a la imagen del producto
+        stock:
+          type: Number
+          description: Cantidad disponible del producto
+        category:
+          type: String
+          description: Categoria a la que pertenece el producto 
+        status:
+          type: Boolean
+          description: true
+      example:
+        _id: ObjectId("9962ff9a-4761-4cdf-b27e-961a7921406a")
+        title: Lampara Tokio
+        description: Lampara de pie con foco simple
+        code: 9962ff9a-4761
+        price: 12300
+        thumbnail: Link a la imagen
+        stock: 4
+        category: Lampara de pie
+        status: true
+  requestBodies:
+    updateProduct:
+      type: Object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado por Mongo
+        title:
+          type: String
+          description: Nombre del Producto
+        description:
+          type: String
+          description: Descripcion del producto
+        code:
+          type: String
+          description: Codigo referente al producto
+        price:
+          type: Number
+          description: Precio del Producto
+        thumbnail:
+          type: String
+          description: Link a la imagen del producto
+        stock:
+          type: Number
+          description: Cantidad disponible del producto
+        category:
+          type: String
+          description: Categoria a la que pertenece el producto 
+        status:
+          type: Boolean
+          description: true
+      example:
+        _id: ObjectId("7aa09cb3-c76a-48f6-a7c1-ef4f0103f3e4 ")
+        title: Lampara Double SH
+        description: Lampara de techo con foco doble
+        code: 961a7921406a
+        price: 18000
+        thumbnail: Link a la imagen
+        stock: 7
+        category: Lampara de techo
+        status: true
